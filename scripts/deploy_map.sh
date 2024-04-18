@@ -32,8 +32,8 @@ echo "Building web assets..."
 rm -rf dist
 npm run build
 
-# Step 4: Deploy to GitHub Pages or any other hosting
-echo "Deploying to hosting..."
-npm run deploy
+## Step 4: Deploy to GitHub Pages or any other hosting
+#echo "Deploying to hosting..."
+#npm run deploy
 
 echo "Deployment completed successfully."

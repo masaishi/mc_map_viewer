@@ -10,20 +10,25 @@ var map = new maplibregl.Map({
         tiles: ['./data/tiles/12/{x}/{y}.png'],
         tileSize: 256,
         zoom: 12,
-        minZoom: 12,
-        maxZoom: 12,
+        minzoom: 0,
+        maxzoom: 22,
       }
     },
     layers: [{
       id: 'minecraft-tiles',
       type: 'raster',
-      source: 'minecraft-tiles'
+      source: 'minecraft-tiles',
+      minzoom: 0,
+      maxzoom: 22,
+      paint: {
+        'raster-opacity': 1,
+      }
     }]
   },
   center: [0, 0],
   zoom: 12,
-  maxZoom: 14,
-  minZoom: 0,
+  maxZoom: 16,
+  minZoom: 8,
 });
 
 // Wait until the map and its styles are fully loaded
