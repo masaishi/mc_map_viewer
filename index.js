@@ -34,7 +34,7 @@ map.on('load', function() {
 		const { lngDist, latDist} = getTileCoordinates(lng, lat);
 
 		const mcX = Math.floor(lngDist / metersPerPixel);
-		const mcZ = Math.floor(latDist / metersPerPixel);
+		const mcZ = Math.floor(latDist / metersPerPixel) * -1;
 	
 		document.getElementById('info').innerHTML = `Minecraft coordinates: [x: ${mcX}, z: ${mcZ}]`;
 	});
