@@ -1,6 +1,8 @@
 # mc_map_viewer
 
-`mc_map_viewer` is an open-source tool designed to render interactive maps of Minecraft world data on a web interface. Utilizing `maplibre-gl-js` and `fastnbt`, it transforms Minecraft's NBT and Anvil formats into raster tiles, enabling dynamic exploration of Minecraft worlds.
+**mc_map_viewer** is a Github template tool designed to display interactive maps of Minecraft world data through a web interface. It leverages maplibre-gl-js and fastnbt to convert Minecraft's NBT and Anvil formats into raster tiles, allowing for dynamic visualization and exploration of Minecraft worlds.
+
+![mc_map_viewer](https://github.com/masaishi/mc_map_viewer/assets/1396267/ca7736c2-40ce-4c16-ac4a-5b264d67561a)
 
 ## Technologies Used
 
