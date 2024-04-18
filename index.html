@@ -8,10 +8,26 @@
 			padding:0;
 		}
         #map { position:absolute; top:0; bottom:0; width:100%; }
+		#info {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translate(-50%);
+			width: 60%;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			font-size: 12px;
+			text-align: center;
+			color: #222;
+			background: rgba(255,255,255,1.0);
+		}
     </style>
 </head>
 <body>
 	<div id="map"></div>
+	<pre id="info">Minecraft coordinates: [x: ?, z: ?]</pre>
 	<script src="./index.js"></script>
 </body>
 </html>

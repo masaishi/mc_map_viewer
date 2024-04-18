@@ -28,8 +28,8 @@ for path in "$source_directory"/*; do
     y=${PARTS[1]}
     extension=${PARTS[2]}
 
-    new_x=$(( (2**$z) / 2 + x ))
-    new_y=$(( (2**$z) / 2 + y ))
+    new_x=$(( (2**($z - 1)) + x ))
+    new_y=$(( (2**($z - 1)) + y ))
 
     new_path="$target_directory/$z/$new_x/$new_y.$extension"
     mkdir -p "$(dirname "$new_path")"

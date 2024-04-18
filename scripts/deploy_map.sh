@@ -29,6 +29,7 @@ echo "Converting PNG tiles to server-ready tiles..."
 
 # Step 3: Build and prepare assets with webpack
 echo "Building web assets..."
+rm -rf dist
 npm run build
 
 # Step 4: Deploy to GitHub Pages or any other hosting
