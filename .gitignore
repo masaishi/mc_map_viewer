@@ -2,7 +2,8 @@
 
 dist
 node_modules
-data
+data/tiles
+data/tiles_png
 
 tiles
 
