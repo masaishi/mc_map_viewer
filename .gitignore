@@ -4,6 +4,8 @@ dist
 node_modules
 data/tiles
 data/tiles_png
+data/terrarium_tiles
+data/terrarium_tiles_png
 
 tiles
 
