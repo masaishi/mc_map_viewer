@@ -36,11 +36,11 @@ var map = new maplibregl.Map({
     sources: {
       'minecraft-tiles': {
         type: 'raster',
-        tiles: ['./data/tiles/12/{x}/{y}.png'],
+        tiles: ['./tiles/16/{x}/{y}.png'],
         tileSize: 256,
-        zoom: 12,
-        minzoom: 0,
-        maxzoom: 22,
+        zoom: 16,
+        minzoom: 16,
+        maxzoom: 16,
       }
     },
     layers: [{
@@ -55,8 +55,8 @@ var map = new maplibregl.Map({
     }]
   },
   center: mapState ? [mapState.center.lat, mapState.center.lng] : [0, 0],
-  zoom: mapState ? mapState.zoom : 12,
-  maxZoom: 16,
+  zoom: mapState ? mapState.zoom : 16,
+  maxZoom: 20,
   minZoom: 8,
 });
 

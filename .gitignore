@@ -2,8 +2,9 @@
 
 dist
 node_modules
-data/tiles
-data/tiles_png
+rust_bin/
+data/
+!data/palette.tar.gz
+public/
 
-tiles
-
+tiles/
