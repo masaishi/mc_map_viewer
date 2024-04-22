@@ -17,8 +17,8 @@ module.exports = {
     }),
 	new CopyPlugin({
 		patterns:[
-			{ from: 'data/tiles', to: 'data/tiles' },
-			{ from: 'data/terrarium_tiles', to: 'data/terrarium_tiles' },
+			{ from: 'public/tiles', to: 'tiles' },
+			{ from: 'public/terrarium_tiles', to: 'terrarium_tiles' }
 		]
 	}),
   ],
