@@ -36,10 +36,10 @@ var map = new maplibregl.Map({
     sources: {
       'minecraft-tiles': {
         type: 'raster',
-        tiles: ['./tiles/16/{x}/{y}.png'],
-        tileSize: 256,
+        tiles: ['./tiles/{z}/{x}/{y}.png'],
+        tileSize: 512,
         zoom: 16,
-        minzoom: 16,
+        minzoom: 8,
         maxzoom: 16,
       }
     },
