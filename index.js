@@ -37,18 +37,18 @@ var map = new maplibregl.Map({
       'minecraft-tiles': {
         type: 'raster',
         tiles: ['./tiles/{z}/{x}/{y}.png'],
-        tileSize: 256,
+        tileSize: 512,
         zoom: 16,
-        minzoom: 0,
+        minzoom: 8,
         maxzoom: 16,
       },
 			'raster-tiles': {
         type: 'raster-dem',
         encoding: 'terrarium',
         tiles: ['./terrarium_tiles/16/{x}/{y}.png'],
-        tileSize: 256,
-        minzoom: 0,
-        maxzoom: 22,
+        tileSize: 512,
+        minzoom: 8,
+        maxzoom: 16,
       },
     },
     layers: [
