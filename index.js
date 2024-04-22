@@ -87,7 +87,7 @@ map.on('load', function() {
 });
 
 function toMinecraftCoords({lat, lng}) {
-  const metersPerPixel = calculateMetersPerPixel(12, 0);
+  const metersPerPixel = calculateMetersPerPixel(16, 0);
   const {
     lngDist,
     latDist
@@ -103,7 +103,7 @@ function toMinecraftCoords({lat, lng}) {
 }
 
 function toLatLng({x, z}) {
-  const metersPerPixel = calculateMetersPerPixel(12, 0);
+  const metersPerPixel = calculateMetersPerPixel(16, 0);
   const latDist = x * metersPerPixel;
   const lngDist = z * metersPerPixel * -1;
   return getTileCoordinatesInverse(lngDist, latDist);
