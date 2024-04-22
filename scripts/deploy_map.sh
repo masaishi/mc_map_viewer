@@ -17,12 +17,12 @@ else
     ./scripts/convert_tiles.sh $WORLD_DIR $TILE_SIZE
 fi
 
-# Step 3: Build and prepare assets with webpack
+# Build and prepare assets with webpack
 echo "Building web assets..."
 rm -rf dist
 npm run build
 
-# Step 4: Deploy to GitHub Pages or any other hosting
+# Deploy to GitHub Pages or any other hosting
 echo "Deploying to hosting..."
 npm run deploy
 

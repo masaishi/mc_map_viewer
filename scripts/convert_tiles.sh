@@ -20,14 +20,18 @@ TILES_DIR="$PUBLIC_DIR/tiles"
 mkdir -p $TILES_PNG_DIR
 mkdir -p $TILES_DIR
 
-# Step 1: Convert Minecraft region data to PNG
+# Convert Minecraft region data to PNG
 echo "Converting Minecraft region files to PNG..."
-if [ -z "$TILE_SIZE" ]; then
-    ./rust_bin/anvil tiles $WORLD_DIR --palette $DATA_DIR/palette.tar.gz --calculate-heights --out $TILES_PNG_DIR
-else
-    ./rust_bin/anvil tiles $WORLD_DIR --palette $DATA_DIR/palette.tar.gz --calculate-heights --out $TILES_PNG_DIR --size "$TILE_SIZE"
+CMD="./rust_bin/anvil tiles $WORLD_DIR --palette $DATA_DIR/palette.tar.gz --calculate-heights --out $TILES_PNG_DIR"
+if [ ! -z "$TILE_SIZE" ]; then
+    CMD="$CMD --size $TILE_SIZE"
 fi
+$CMD
 
-# Step 2: Convert the PNG tiles to server-ready tiles
+# Convert the PNG tiles to server-ready tiles
 echo "Converting PNG tiles to server-ready tiles..."
 ./scripts/transform_and_relocate_files.sh $TILES_PNG_DIR $TILES_DIR
+
+# Generate vague zoom level images
+echo "Generating vague zoom level images..."
+mapback-rs $TILES_DIR --max-zoom 16 --min-zoom 8

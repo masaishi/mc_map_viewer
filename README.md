@@ -18,6 +18,12 @@ The **mc_map_viewer** GitHub template offers a solution for visualizing your Min
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
 
+2. Install mapback-rs, it is a tool to generate roughly images for unzoomed maps:
+
+	```bash
+	cargo install mapback-rs
+	```
+
 ### Repository Setup
 
 1. Clone the repository:
