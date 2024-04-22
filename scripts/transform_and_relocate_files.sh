@@ -8,7 +8,7 @@ fi
 
 source_directory=$1
 target_directory=$2
-z=12
+z=16
 
 # Create or clean target directory
 if [ -d "$target_directory" ]; then
